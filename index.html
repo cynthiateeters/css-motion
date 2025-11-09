@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Motion Board</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- Page header with title and subtitle -->
+  <header>
+    <h1>Motion Board</h1>
+    <!-- Change the h1 to your preferred title -->
+    <p class="subtitle">Three experiments exploring motion and accessibility with CSS</p>
+    <!-- Customize the subtitle to match your approach -->
+  </header>
+
+  <!-- Main content area: Contains all three motion sections plus reflection -->
+  <main>
+
+    <!-- ============================================
+         SECTION 1: MICRO INTERACTION
+         A small UI element with subtle hover feedback
+         ============================================ -->
+    <section class="motion-section" id="micro-interaction">
+      <h2>Micro Interaction</h2>
+
+      <!-- Container for your interactive element -->
+      <div class="micro-demo">
+        <!-- Replace with your chosen element: button, badge, tag, icon, or link -->
+        <button class="interactive-element">
+          Hover or Focus Me
+        </button>
+        <!-- Add your transform and transition here -->
+        <!-- Remember: smooth state change, 250-400ms duration -->
+      </div>
+
+      <!-- Caption explaining the motion's personality -->
+      <p class="motion-caption">
+        Brief description of this motion's personality and intent (1-2 sentences).
+      </p>
+    </section>
+
+    <!-- ============================================
+         SECTION 2: TIMING COMPARISON
+         Two identical elements with different timing functions
+         ============================================ -->
+    <section class="motion-section" id="timing-comparison">
+      <h2>Timing Comparison</h2>
+
+      <!-- Container for side-by-side comparison -->
+      <div class="comparison-container">
+
+        <!-- Element 1: First timing function -->
+        <div class="comparison-item">
+          <button class="timing-button timing-one">
+            Hover Me
+          </button>
+          <p class="timing-label">Timing Function 1</p>
+          <!-- Add your first timing function name -->
+        </div>
+
+        <!-- Element 2: Second timing function -->
+        <div class="comparison-item">
+          <button class="timing-button timing-two">
+            Hover Me
+          </button>
+          <p class="timing-label">Timing Function 2</p>
+          <!-- Add your second timing function name -->
+        </div>
+
+      </div>
+
+      <!-- Explanation of timing differences -->
+      <p class="motion-caption">
+        Describe the difference in feel between these two timing functions and which feels more natural (2-3 sentences).
+      </p>
+    </section>
+
+    <!-- ============================================
+         SECTION 3: FEATURE CARD (3D FLIP)
+         Card that flips to reveal content on back
+         Based on Kevin Powell tutorial foundation
+         ============================================ -->
+    <section class="motion-section" id="feature-card">
+      <h2>Feature Card</h2>
+
+      <!-- Card container -->
+      <div class="card-container">
+        
+        <!-- Card inner (this is what rotates) -->
+        <div class="card-inner">
+          
+          <!-- Front face of card -->
+          <div class="card-face card-front">
+            <h3>Card Front Title</h3>
+            <!-- Add your content: image, text, etc. -->
+            <p>Front face content goes here. This is what users see first.</p>
+          </div>
+
+          <!-- Back face of card -->
+          <div class="card-face card-back">
+            <h3>Card Back Title</h3>
+            <!-- Add your content: paragraph, list, etc. -->
+            <p>Back face content goes here. This is revealed on hover/focus.</p>
+          </div>
+
+        </div>
+        <!-- End card-inner -->
+        
+      </div>
+      <!-- End card-container -->
+
+      <!-- You'll add the 3D transform properties and transitions -->
+      <!-- Remember: smooth flip (400-600ms), preserve layout, GPU properties only -->
+    </section>
+
+    <!-- ============================================
+         SECTION 4: ACCESSIBILITY & REFLECTION
+         Reflection paragraph and accessibility notes
+         ============================================ -->
+    <section class="motion-section" id="reflection">
+      <h2>Accessibility & Reflection</h2>
+
+      <!-- Accessibility implementation note -->
+      <div class="accessibility-note">
+        <h3>Reduced Motion Implementation</h3>
+        <p>
+          Describe how you handled prefers-reduced-motion across all three sections (2-3 sentences).
+        </p>
+      </div>
+
+      <!-- Personal reflection -->
+      <div class="reflection-text">
+        <h3>Design Reflection</h3>
+        <p>
+          Write your reflection here (3-5 sentences minimum). Address: What surprised you? Which demo best expresses your intent? What did you learn about motion as design?
+        </p>
+      </div>
+
+    </section>
+
+  </main>
+
+  <!-- Footer with attribution and closure -->
+  <footer>
+    <p>Created for Web Development II — Motion Board Project</p>
+    <!-- Optional: Add link to deployed site or GitHub repo -->
+  </footer>
+
+</body>
+
+</html>

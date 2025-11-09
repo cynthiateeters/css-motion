@@ -1,0 +1,387 @@
+/* ============================================
+   MOTION BOARD STARTER CODE - LAYOUT ONLY
+   This file handles only structural layout.
+   You'll add your motion, timing, and styling.
+   ============================================ */
+
+/* ============================================
+   LAYOUT CUSTOM PROPERTIES
+   Adjust these values to customize spacing
+   ============================================ */
+:root {
+  /* Container spacing */
+  --container-padding: 2rem;
+  --section-spacing: 4rem;
+  /* Space between major sections */
+  --content-max-width: 1200px;
+  /* Maximum width for content */
+
+  /* Vertical rhythm */
+  --space-xs: 0.5rem;
+  --space-sm: 1rem;
+  --space-md: 1.5rem;
+  --space-lg: 2rem;
+  --space-xl: 3rem;
+
+  /* Card dimensions (for Section 3) */
+  --card-width: 400px;
+  --card-height: 500px;
+}
+
+/* ============================================
+   BASIC RESET
+   ============================================ */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ============================================
+   PAGE STRUCTURE
+   ============================================ */
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+
+  /* You'll add: background color, text color, font-family */
+}
+
+/* ============================================
+   HEADER
+   Page title and subtitle area
+   ============================================ */
+header {
+  padding: var(--space-xl) var(--container-padding);
+  text-align: center;
+
+  /* You'll add: background, border, or other styling */
+}
+
+header h1 {
+  /* You'll add: font-size, font-weight, color, margin */
+}
+
+header .subtitle {
+  margin-top: var(--space-sm);
+  /* You'll add: font-size, color, font-style */
+}
+
+/* ============================================
+   MAIN CONTENT AREA
+   Contains all motion sections
+   ============================================ */
+main {
+  flex: 1;
+  max-width: var(--content-max-width);
+  margin: 0 auto;
+  padding: var(--container-padding);
+  width: 100%;
+
+  /* Vertical layout with spacing between sections */
+  display: flex;
+  flex-direction: column;
+  gap: var(--section-spacing);
+}
+
+/* ============================================
+   MOTION SECTIONS
+   Each of the four major sections
+   ============================================ */
+.motion-section {
+  /* Basic spacing and layout */
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-lg);
+
+  /* You'll add: background, padding, border, border-radius, shadow */
+}
+
+.motion-section h2 {
+  /* You'll add: font-size, font-weight, color, text-align */
+}
+
+/* ============================================
+   SECTION 1: MICRO INTERACTION
+   Container for single interactive element
+   ============================================ */
+.micro-demo {
+  /* Center the element */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: var(--space-xl);
+
+  /* You'll add: background or border to define the demo area */
+}
+
+.interactive-element {
+  /* Basic button reset */
+  border: none;
+  cursor: pointer;
+  padding: var(--space-md) var(--space-lg);
+
+  /* You'll add:
+     - All styling (colors, fonts, borders, etc.)
+     - Transform and transition properties
+     - Hover and focus states with motion
+     - prefers-reduced-motion alternative
+  */
+}
+
+/* ============================================
+   SECTION 2: TIMING COMPARISON
+   Side-by-side comparison container
+   ============================================ */
+.comparison-container {
+  /* Responsive layout: side-by-side on larger screens, stacked on mobile */
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-lg);
+  justify-content: center;
+  padding: var(--space-lg);
+
+  /* You'll add: background or border to define comparison area */
+}
+
+.comparison-item {
+  /* Individual comparison item */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-sm);
+  min-width: 200px;
+}
+
+.timing-button {
+  /* Basic button reset */
+  border: none;
+  cursor: pointer;
+  padding: var(--space-md) var(--space-lg);
+  width: 100%;
+
+  /* You'll add:
+     - All styling (colors, fonts, borders, etc.)
+     - Same transform for both buttons
+     - Same duration for both buttons
+     - DIFFERENT timing functions (timing-one vs timing-two)
+     - prefers-reduced-motion alternative
+  */
+}
+
+.timing-label {
+  /* You'll add: font-size, color, font-weight */
+}
+
+/* ============================================
+   SECTION 3: FEATURE CARD (3D FLIP)
+   Card flip structure based on Kevin Powell tutorial
+   ============================================ */
+
+/* Outer container - centers the card */
+.card-container {
+  /* Center the card on the page */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: var(--space-xl);
+
+  /* You'll add: background, perspective value for 3D effect */
+}
+
+/* Card inner - this is what rotates */
+.card-inner {
+  /* Card dimensions */
+  width: var(--card-width);
+  height: var(--card-height);
+  position: relative;
+
+  /* This enables 3D transforms for child elements */
+  /* You'll add: transform-style: preserve-3d */
+  /* You'll add: transition for the rotation */
+}
+
+/* Both card faces share these properties */
+.card-face {
+  /* Position faces on top of each other */
+  position: absolute;
+  width: 100%;
+  height: 100%;
+
+  /* Prevent back face from showing through */
+  /* You'll add: backface-visibility: hidden */
+
+  /* Layout for content inside face */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: var(--space-lg);
+  gap: var(--space-md);
+
+  /* You'll add: background, border, border-radius, shadow, colors */
+}
+
+/* Front face - visible by default */
+.card-front {
+  /* You'll add: any front-specific styling */
+}
+
+/* Back face - rotated 180 degrees */
+.card-back {
+  /* You'll add: transform: rotateY(180deg) to flip this face */
+  /* You'll add: any back-specific styling */
+}
+
+/* Hover/focus state for card */
+/* You'll add a rule like:
+   .card-container:hover .card-inner,
+   .card-container:focus-within .card-inner {
+     transform: rotateY(180deg);
+   }
+*/
+
+/* ============================================
+   SECTION 4: ACCESSIBILITY & REFLECTION
+   Text content sections
+   ============================================ */
+.accessibility-note,
+.reflection-text {
+  /* Basic spacing */
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+
+  /* You'll add: background, padding, border, border-radius */
+}
+
+.accessibility-note h3,
+.reflection-text h3 {
+  /* You'll add: font-size, font-weight, color */
+}
+
+.accessibility-note p,
+.reflection-text p {
+  /* You'll add: font-size, line-height, color */
+}
+
+/* ============================================
+   MOTION CAPTIONS
+   Text explaining motion choices
+   ============================================ */
+.motion-caption {
+  text-align: center;
+  /* You'll add: font-size, color, line-height, font-style */
+}
+
+/* ============================================
+   FOOTER
+   Page closure and attribution
+   ============================================ */
+footer {
+  padding: var(--space-lg) var(--container-padding);
+  margin-top: auto;
+  text-align: center;
+
+  /* You'll add: background, border-top, color */
+}
+
+footer p {
+  /* You'll add: font-size, color */
+}
+
+/* ============================================
+   RESPONSIVE ADJUSTMENTS
+   Fine-tune at different screen sizes
+   ============================================ */
+
+/* Tablets and up */
+@media (min-width: 768px) {
+  :root {
+    --container-padding: 3rem;
+    --section-spacing: 5rem;
+  }
+
+  .comparison-container {
+    flex-wrap: nowrap;
+    /* Side-by-side on larger screens */
+  }
+}
+
+/* Large screens */
+@media (min-width: 1024px) {
+  :root {
+    --container-padding: 4rem;
+    --section-spacing: 6rem;
+  }
+}
+
+/* Reduce card size on mobile */
+@media (max-width: 500px) {
+  :root {
+    --card-width: 320px;
+    --card-height: 400px;
+  }
+}
+
+/* ============================================
+   REDUCED MOTION SUPPORT
+   This is where YOU implement accessibility
+   ============================================ */
+
+/*
+  You MUST add a prefers-reduced-motion media query here.
+  
+  Example structure:
+  
+  @media (prefers-reduced-motion: reduce) {
+    
+    // Remove or modify transitions for all interactive elements
+    .interactive-element,
+    .timing-button,
+    .card-inner {
+      // Either remove transition entirely
+      // Or use very brief opacity fade (under 200ms)
+    }
+    
+    // For the card: instant flip or opacity crossfade
+    // See tutorial for acceptable reduced-motion behaviors
+    
+  }
+*/
+
+/* ============================================
+   NOTES FOR STUDENTS
+   ============================================
+
+   What's provided (DO NOT CHANGE):
+   - Page structure and semantic HTML
+   - Responsive layout system
+   - Card flip HTML structure (front/back faces)
+   - Spacing and positioning
+
+   What's missing (YOU MUST ADD):
+   ✓ ALL color system (backgrounds, text, borders)
+   ✓ ALL typography (fonts, sizes, weights, line-heights)
+   ✓ ALL transforms (translate, scale, rotate)
+   ✓ ALL transitions (properties, durations, timing functions)
+   ✓ ALL hover and focus states with motion
+   ✓ ALL 3D transform setup for card flip
+   ✓ prefers-reduced-motion media query for ALL sections
+   ✓ Visual styling (borders, shadows, decorative elements)
+
+   Key Requirements from Stations 1-3:
+   - Use GPU properties only (transform, opacity)
+   - Micro Interaction: 250-400ms duration
+   - Timing Comparison: Same duration, different curves
+   - Feature Card: 400-600ms duration, smooth flip
+   - ALL sections must respect prefers-reduced-motion
+
+   Remember:
+   - Motion serves meaning, not decoration
+   - Test with reduced-motion enabled in DevTools
+   - Focus states must be as visible as hover states
+   - Layout should never jump or reflow
+
+   ============================================ */
