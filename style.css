@@ -94,7 +94,8 @@ main {
   display: flex;
   flex-direction: column;
   gap: var(--space-lg);
-
+  /* Temporary outline for development */
+  outline: 1px solid black;
   /* You'll add: background, padding, border, border-radius, shadow */
 }
 
@@ -332,11 +333,11 @@ footer p {
 
 /*
   You MUST add a prefers-reduced-motion media query here.
-  
+
   Example structure:
-  
+
   @media (prefers-reduced-motion: reduce) {
-    
+
     // Remove or modify transitions for all interactive elements
     .interactive-element,
     .timing-button,
@@ -344,10 +345,10 @@ footer p {
       // Either remove transition entirely
       // Or use very brief opacity fade (under 200ms)
     }
-    
+
     // For the card: instant flip or opacity crossfade
     // See tutorial for acceptable reduced-motion behaviors
-    
+
   }
 */
 
